@@ -1,0 +1,18 @@
+<form action="#/edit/{{team._id}}" method="post">
+    <div class="form-group">
+        <label for="name">New Team Name:</label>
+        <input class="form-control" type="text" id="name" name="name" value="{{team.name}}"/>
+    </div>
+    <div class="form-group">
+        <label for="comment">New Team Comment/Description: </label>
+        <input class="form-control" type="text" id="comment" name="comment" value="{{team.comment}}"/>
+    </div>
+    <div>
+        {{#each team.members}}
+        {{> teamMember}}
+        {{else}}
+        <p>No member info</p>
+        {{/each}}
+    </div>
+    <input class="btn btn-default" type="submit" value="Update Team"/>
+</form>

@@ -1,0 +1,9 @@
+{{#if isAuthor}}
+<a href="#/edit/{{team._id}}" class="btn btn-default">Edit Info</a>
+{{/if}}
+{{#if isOnTeam}}
+<a href="#/leave/{{team._id}}" class="btn btn-default">Leave Team</a>
+{{/if}}
+{{#if hasNoTeam}}
+<a href="#/join/{{team._id}}" class="btn btn-default">Join Team</a>
+{{/if}}
