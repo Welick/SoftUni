@@ -1,0 +1,55 @@
+{{> header}}
+<table style="margin: 0 auto; margin-top:5%; margin-bottom: 5%; width: 95%;" class="table table-hover">
+    <thead>
+        <tr class="bg-warning">
+            <th>
+                #
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each offers}}
+        <tr>
+            <td class="">{{count}}</td>
+            <td class="">{{product}}</td>
+            <td class="description">{{description}}</td>
+            <td class="">{{price}}</td>
+            <td>
+                <a href='#/offer/details/{{_id}}' class="btn-primary btn">Order details</a>
+            </td>
+            <td>
+                {{#if isOwner}}
+                <a href='#/offer/delete/{{_id}}' class="btn-danger btn">Delete</a>
+                <a href='#/offer/edit/{{_id}}' class="btn-info btn">Edit</a>
+                {{else}}
+                <!--BONUS (Not-Required)--><a href="#/offer/buy" class="btn-warning btn">Buy</a>
+                <!--BONUS (Not-Required)-->
+                {{/if}}
+            </td>
+        </tr>
+        {{else}}
+        <tr>
+            <td style="text-align: center;" colspan="6">
+                <h2 style="font-style: italic;">There are no offers, we are very sorry...</h2>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
+{{> footer}}
