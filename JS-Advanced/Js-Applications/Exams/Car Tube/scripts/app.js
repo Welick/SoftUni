@@ -135,7 +135,7 @@ const app = Sammy('#container', function () {
                 ctx.redirect('#/home');
                 displaySuccess('Listing deleted.');
             })
-            .catch(displayError('Internet connection lost.'));
+            .catch(()=>displayError('Internet connection lost.'));
     })
 
     this.get('#/user/listings', function (ctx) {
