@@ -1,0 +1,38 @@
+{{> header}}
+<div id="eventsHolder">
+    {{#each events}}
+    <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden eventPlaceholder">
+        <div class="my-3 p-3">
+            <h2 class="display-5">{{name}}</h2>
+        </div>
+        <div>
+            <div class="img"><img class="eventPicture" src="{{imageURL}}" />
+            </div>
+            <a href="#/event/details/{{_id}}" class="eventDetails">More</a>
+        </div>
+    </div>
+    {{else}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="fouronefour">
+                    <img class="no-found-picture" src="./images/404face.png" />
+                </div>
+                <div class="error-template">
+                    <h1>
+                        Oops!</h1>
+                    <h2>
+                        404 Not Found</h2>
+                    <div class="error-details">
+                        UniEnt cannot find any event...
+                    </div>
+                    <div class="actions">
+                        <a href="#/event/create" class="btn btn-dark btn-lg">Create the first one? </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{> footer}}
