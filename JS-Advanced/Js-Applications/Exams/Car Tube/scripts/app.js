@@ -203,3 +203,8 @@ function displayError(message) {
 
     div.addEventListener('click', () => div.style.display = 'none');
 }
+
+$(document).on({
+    ajaxStart: () => $('#loadingBox').show(),
+    ajaxStop: () => $('#loadingBox').fadeOut()
+})
