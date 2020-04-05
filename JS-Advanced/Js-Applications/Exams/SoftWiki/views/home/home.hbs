@@ -1,0 +1,60 @@
+{{> header}}
+<div class="content">
+    <section class="js">
+        <h2>JavaScript</h2>
+        <div class="articles">
+            {{#each jsArticles}}
+            <article>
+                <h3>{{title}}</h3>
+                <p>{{content}}</p>
+                <a href="#/details/{{_id}}" class="btn details-btn">Details</a>
+            </article>
+            {{else}}
+            <h3 class="no-articles">No articles yet</h3>
+            {{/each}}
+        </div>
+    </section>
+    <section class="CSharp">
+        <h2>C#</h2>
+        <div class="articles">
+            {{#each csharpArticles}}
+            <article>
+                <h3>{{title}}</h3>
+                <p>{{content}}</p>
+                <a href="#/details/{{_id}}" class="btn details-btn">Details</a>
+            </article>
+            {{else}}
+            <h3 class="no-articles">No articles yet</h3>
+            {{/each}}
+        </div>
+    </section>
+    <section class="Java">
+        <h2>Java</h2>
+        <div class="articles">
+            {{#each javaArticles}}
+            <article>
+                <h3>{{title}}</h3>
+                <p>{{content}}</p>
+                <a href="#/details/{{_id}}" class="btn details-btn">Details</a>
+            </article>
+            {{else}}
+            <h3 class="no-articles">No articles yet</h3>
+            {{/each}}
+        </div>
+    </section>
+    <section class="Python">
+        <h2>Pyton</h2>
+        <div class="articles">
+            {{#each pythonArticles}}
+            <article>
+                <h3>{{title}}</h3>
+                <p>{{content}}</p>
+                <a href="#/details/{{_id}}" class="btn details-btn">Details</a>
+            </article>
+            {{else}}
+            <h3 class="no-articles">No articles yet</h3>
+            {{/each}}
+        </div>
+    </section>
+</div>
+{{> footer}}
