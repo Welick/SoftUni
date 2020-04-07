@@ -1,0 +1,10 @@
+{
+  "name": "ts",
+  "version": "",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "handlebars": "^4.7.6",
+    "jquery": "^3.4.1",
+    "sammy": "^0.7.6"
+  }
+}

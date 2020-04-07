@@ -1,0 +1,36 @@
+{{> header}}
+{{#if isLogged}}
+<section class="dashboard">
+    <h1>Dashboard</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#/home">All</a></li>
+            <li><a href="#/home/cats">Cats</a></li>
+            <li><a href="#/home/dogs">Dogs</a></li>
+            <li><a href="#/home/parrots">Parrots</a></li>
+            <li><a href="#/home/reptiles">Reptiles</a></li>
+            <li><a href="#/home/others">Other</a></li>
+        </ul>
+    </nav>
+    <ul class="other-pets-list">
+        {{#each pets}}
+        <li class="otherPet">
+            <h3>Name: {{name}}</h3>
+            <p>Category: {{category}}</p>
+            <p class="img"><img src="{{imageURL}}"></p>
+            <p class="description">{{description}}</p>
+            <div class="pet-info">
+                <a href="#/pet/pet/{{_id}}"><button class="button"><i class="fas fa-heart"></i> Pet</button></a>
+                <a href="#/pet/details/{{_id}}"><button class="button">Details</button></a>
+                <i class="fas fa-heart"></i> <span> {{likes}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{else}}
+<section class="basic">
+    <h1> Welcome to pet my pet!</h1>
+</section>
+{{/if}}
+{{> footer}}
